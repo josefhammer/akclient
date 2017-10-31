@@ -1,0 +1,41 @@
+{
+    "States": {
+        "DeviceState": {
+            "Pause": 0,
+            "Standby": 1,
+            "Measurement": 2
+        }
+    },
+    
+    "AK": {
+        "ASTA": {
+            "Response": [
+                {"ParameterChangeFlag": "Int"},
+                {"ResultChangeFlag": "Int"},
+                {"UserLevel": "Int"},
+                {"DeviceState": "Int"},
+                {"Status": "String"},
+                {"RemainingTime": "Int"},
+                {"Plausibility": "Int"},
+                {"HighestErrorSeverity": "Int"},
+                {"ClientMasterMode": "Int"}
+            ]
+        },
+        "EUSR": {
+            "Parameters": [
+                {"UserLevel" : "Int"},
+                {"Password": "String"},
+                {"NewPassword": "String"}
+            ],
+        },
+        "EUSR": {
+            "Parameters": [
+                {"UserLevel" : "Int"}   
+            ],
+            "Optional": [
+                {"Password": "String"},
+                {"NewPassword": "String"}
+            ]
+        }
+    }
+}
