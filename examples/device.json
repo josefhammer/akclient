@@ -23,13 +23,6 @@
         },
         "EUSR": {
             "Parameters": [
-                {"UserLevel" : "Int"},
-                {"Password": "String"},
-                {"NewPassword": "String"}
-            ],
-        },
-        "EUSR": {
-            "Parameters": [
                 {"UserLevel" : "Int"}   
             ],
             "Optional": [
