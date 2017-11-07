@@ -107,9 +107,9 @@ class AK
 
     /** Parses the given script for raw AK commands, replaces them with method calls, and evaluates the entire script.
     */
-    static evaluateScript(obj, String script, String scriptDir = "")
+    static evaluateScript(obj, String script, String scriptDir = null)
     {
-        this.scriptDir = scriptDir
+        this.scriptDir = scriptDir ?: System.getProperty("user.dir")
         def sb = new StringBuilder()
         sb.append("def methodMissing(String name, args) { AK.methodMissing(this, ak, name, args) }\n") // REVIEW
         
