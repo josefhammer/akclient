@@ -190,6 +190,14 @@ class AKResult
     }
     
     
+    /** Returns the number of properties/elements in the response message.
+    */
+    def getSize()
+    {
+       return values.size()
+    }
+    
+    
     /** Returns the value (from the response) of the given property.
 
         Does the command used to obtain this result contain the requested property in the device description?
