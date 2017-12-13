@@ -4,8 +4,9 @@
 
     <p>
     No configuration required! AK commands are detected using a regular expression; by default a single word consisting
-    of 4 or 5 uppercase letters (A-Z). For additional convenience a JSON file can be loaded containing meta data 
-    about the device, in particular the names of the response variables.
+    of 2 uppercase letters (A-Z), followed by another 2 or 3 uppercase letters or digits (A-Z, 0-9). For additional 
+    convenience a JSON file can be loaded containing meta data about the device, in particular the names of the response
+    variables.
     
     <p>
     Ideal for writing complex test scripts in Groovy to automate the testing of devices. Groovy is a very powerful
@@ -69,7 +70,7 @@
 class AK
 {
     /** The regular expression used to detect AK commands in the Groovy code (customizable). */
-    static cmdRegex = /[A-Z]{4,5}/              
+    static cmdRegex = /[A-Z]{2}[A-Z0-9]{2,3}/
     /** The list of available error codes that will be stored in AKResult.errorCode (customizable). */
     static errorCodes = ['BS', 'SE', 'NA', 'DF', 'OF']
     /** The path to the AK script being evaluated */
