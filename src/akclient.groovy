@@ -124,7 +124,10 @@ class AK
     */
     static String parse(String line)
     {
-        ((line =~ /^\s*${AK.cmdRegex}(\s+[^\(]|$)/) ? "ak \"${line.trim()}\"" : line)
+        // (an intended) AK.cmdRegex, followed by either (1) at least one space and anything but '\' or '(' 
+        //                                            or (2) spaces and EOL
+        //
+        ((line =~ /^\s*${AK.cmdRegex}(\s+[^\(]|\s*$)/) ? "ak \"${line.trim()}\"" : line)
     }
 
 
